@@ -1,3 +1,9 @@
+<div *ngIf="selected">
+  <app-book-detail [bookDetail]="selectedBook"></app-book-detail>
+ </div>
+ 
+ <hr />
+
 <div class="container-fluid">
   <div class="row">
     <div class="col mb-2" *ngFor="let book of books">
@@ -6,6 +12,7 @@
           class="card-img-top"
           src="{{ book.image }}"
           alt="{{ book.name }}"
+          (click)="onSelected(book)"
         />
         <div class="card-body">
           <h5 class="card-title">{{ book.name }}</h5>

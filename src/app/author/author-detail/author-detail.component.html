@@ -1,0 +1,31 @@
+<div class="panel-body">
+  <div class="border margin p-3">
+    <p class="h3 p-2 author-name">{{ authorDetail.name }}</p>
+    <p></p>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="thumb">
+          <img
+            class="img-fluid img-thumbnail border border-danger"
+            src="{{ authorDetail.image }}"
+            alt="{{ authorDetail.name }}"
+          />
+        </div>
+      </div>
+      <div class="col-md-7">
+        <dl>
+          <dt class="text-title">Bio</dt>
+          <dd class="text">{{ authorDetail.description }}</dd>
+          <dt class="text-title">BirthDay</dt>
+          <dd class="text">{{ authorDetail.birthDate }}</dd>
+        </dl>
+        <p class="h3">Books by this author:</p>
+        <ul>
+          <li *ngFor="let book of authorDetail.books">
+            <a routerLink="/books/{{ book.id }}">{{ book.name }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

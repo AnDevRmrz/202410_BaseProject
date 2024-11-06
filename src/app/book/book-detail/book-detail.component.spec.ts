@@ -7,7 +7,9 @@ import { BookDetailComponent } from './book-detail.component';
 import { Editorial } from '../../editorial/editorial';
 import { faker } from '@faker-js/faker';
 import { Author } from '../../author/author';
-import { BookDetail } from '../book-detail';
+import { BookDetail } from '../bookDetail';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('BookDetailComponent', () => {
   let component: BookDetailComponent;
@@ -17,6 +19,7 @@ describe('BookDetailComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [BookDetailComponent],
+      imports: [HttpClientModule, RouterTestingModule],
     }).compileComponents();
   }));
 

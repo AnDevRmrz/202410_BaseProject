@@ -29,8 +29,12 @@
             >Books</a
           >
         </li>
-        <li class="nav-item">
-          <a i18n class="nav-link active" routerLink="/authors/list">Authors</a>
+        <li class="nav-item dropdown">
+          <a i18n class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Authors</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/authors/list">List</a></li>
+            <li><a class="dropdown-item" routerLink="/authors/create">Create</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a i18n class="nav-link active" routerLink="/editorials/list"
